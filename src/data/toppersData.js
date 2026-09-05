@@ -1,0 +1,93 @@
+export const topperFilters = [
+  { id: 'all', label: 'All Results' },
+  { id: 'jee', label: 'IIT-JEE' },
+  { id: 'neet', label: 'NEET' },
+  { id: 'boards', label: 'Boards (10th/12th)' },
+]
+
+export const toppersData = [
+  {
+    id: 1,
+    name: 'Aarav Sharma',
+    exam: 'JEE Advanced',
+    category: 'jee',
+    rank: 'AIR 142',
+    score: '99.92 %ile',
+    year: '2025',
+    college: 'IIT Bombay — Computer Science',
+    program: '2-Year Integrated Classroom Batch',
+    image: 'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=400&q=80',
+    quote:
+      'The small batch size at Success Edge meant I could clear every single physics doubt directly with Rao Sir without feeling lost in a crowd of hundreds.',
+  },
+  {
+    id: 2,
+    name: 'Ananya Deshmukh',
+    exam: 'NEET UG',
+    category: 'neet',
+    rank: 'AIR 318',
+    score: '710 / 720',
+    year: '2025',
+    college: 'AIIMS New Delhi',
+    program: 'NEET Pulse 2-Year Batch',
+    image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80',
+    quote:
+      'Mastering NCERT Biology line-by-line with Singhania Sir and taking 50+ full OMR mock tests made the actual NEET exam feel completely effortless.',
+  },
+  {
+    id: 3,
+    name: 'Rohan Verma',
+    exam: 'CBSE 12th Board',
+    category: 'boards',
+    rank: 'District Topper',
+    score: '99.2%',
+    year: '2025',
+    college: 'St. Stephen’s College, Delhi',
+    program: 'Class 12 Board Booster',
+    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80',
+    quote:
+      'The step-by-step subjective answer writing training transformed my board presentation. I jumped from 82% in school pre-boards to 99.2% in CBSE finals!',
+  },
+  {
+    id: 4,
+    name: 'Meera Iyer',
+    exam: 'JEE Main',
+    category: 'jee',
+    rank: 'AIR 84',
+    score: '100 %ile (Math & Phy)',
+    year: '2025',
+    college: 'IIT Delhi — Electrical Engg',
+    program: 'JEE Apex Classroom',
+    image: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80',
+    quote:
+      'The Daily Practice Papers (DPPs) keep you disciplined every single day. You never have a pile of backlog because doubts are resolved within 24 hours.',
+  },
+  {
+    id: 5,
+    name: 'Kavya Patel',
+    exam: 'NEET UG',
+    category: 'neet',
+    rank: 'AIR 495',
+    score: '702 / 720',
+    year: '2025',
+    college: 'Maulana Azad Medical College (MAMC)',
+    program: 'NEET Medical Program',
+    image: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=400&q=80',
+    quote:
+      'The constant emotional encouragement from faculty kept my morale high during mock score dips. Success Edge is not a factory — it feels like family.',
+  },
+  {
+    id: 6,
+    name: 'Siddharth Sen',
+    exam: 'CBSE 10th Board',
+    category: 'boards',
+    rank: 'State Rank 3',
+    score: '98.8%',
+    year: '2025',
+    college: 'Delhi Public School (R.K. Puram)',
+    program: 'Class 10 Board Accelerator',
+    image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80',
+    quote:
+      'Math was my biggest nightmare until I joined Success Edge in Class 9. The visual concepts and patient guidance gave me 100/100 in Board Math.',
+  },
+]
