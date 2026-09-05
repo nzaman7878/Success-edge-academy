@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import StatsStrip from './components/StatsStrip'
+import AboutSection from './components/AboutSection'
 
 function App() {
   const [isDemoModalOpen, setIsDemoModalOpen] = useState(false)
@@ -31,10 +32,12 @@ function App() {
           onExploreCoursesClick={() => handleScrollToSection('#courses')}
         />
         <StatsStrip />
+        <AboutSection onBookDemoClick={() => setIsDemoModalOpen(true)} />
       </main>
     </div>
   )
 }
+
 
 
 export default App
