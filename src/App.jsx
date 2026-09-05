@@ -14,6 +14,7 @@ import FaqSection from './components/FaqSection'
 import ContactSection from './components/ContactSection'
 import BookDemoModal from './components/BookDemoModal'
 import FloatingCta from './components/FloatingCta'
+import Footer from './components/Footer'
 
 function App() {
   const [isDemoModalOpen, setIsDemoModalOpen] = useState(false)
@@ -69,6 +70,8 @@ function App() {
         <ContactSection prefilledCourse={prefilledCourse} />
       </main>
 
+      <Footer onBookDemoClick={() => setIsDemoModalOpen(true)} />
+
       {/* Course Detail / Syllabus Modal */}
       <CourseDetailModal
         course={selectedCourseForModal}
@@ -89,6 +92,7 @@ function App() {
     </div>
   )
 }
+
 
 
 
