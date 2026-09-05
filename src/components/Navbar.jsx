@@ -9,7 +9,6 @@ import {
   MessageCircle,
 } from 'lucide-react'
 import Button from './ui/Button'
-import Badge from './ui/Badge'
 import { academyInfo } from '../data/academyInfo'
 
 export default function Navbar({ onBookDemoClick }) {

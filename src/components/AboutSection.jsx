@@ -7,14 +7,11 @@ import {
   BarChart3,
   BookOpenCheck,
   GraduationCap,
-  Sparkles,
-  ArrowRight,
 } from 'lucide-react'
 import SectionHeading from './ui/SectionHeading'
 import Card from './ui/Card'
 import Button from './ui/Button'
 import Badge from './ui/Badge'
-import { academyInfo } from '../data/academyInfo'
 
 export default function AboutSection({ onBookDemoClick }) {
   const comparisonItems = [

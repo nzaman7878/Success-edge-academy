@@ -5,7 +5,6 @@ import {
   Trophy,
   Clock,
   ShieldCheck,
-  CheckCircle,
   BookMarked,
   HelpCircle,
 } from 'lucide-react'

@@ -6,10 +6,9 @@ import {
   MapPin,
   Clock,
   MessageCircle,
-  ShieldCheck,
-  Heart,
-  Send,
+  Sparkles,
 } from 'lucide-react'
+import Button from './ui/Button'
 import { academyInfo } from '../data/academyInfo'
 import { coursesData } from '../data/coursesData'
 
@@ -99,6 +98,17 @@ export default function Footer({ onBookDemoClick }) {
               >
                 <MessageCircle className="w-4 h-4" />
               </a>
+            </div>
+
+            <div className="pt-2">
+              <Button
+                variant="primary"
+                size="sm"
+                icon={Sparkles}
+                onClick={onBookDemoClick}
+              >
+                Book Free Demo Class
+              </Button>
             </div>
           </div>
 

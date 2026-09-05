@@ -1,11 +1,8 @@
 import React, { useState } from 'react'
 import {
   Trophy,
-  Award,
-  GraduationCap,
   Sparkles,
   Quote,
-  Star,
   CheckCircle2,
 } from 'lucide-react'
 import SectionHeading from './ui/SectionHeading'

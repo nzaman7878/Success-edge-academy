@@ -1,18 +1,15 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import {
   Phone,
   Mail,
   MapPin,
   Clock,
   MessageCircle,
-  Sparkles,
   CheckCircle2,
-  AlertCircle,
   Calendar,
   Send,
 } from 'lucide-react'
 import SectionHeading from './ui/SectionHeading'
-import Card from './ui/Card'
 import Button from './ui/Button'
 import Badge from './ui/Badge'
 import { academyInfo } from '../data/academyInfo'
@@ -31,12 +28,7 @@ export default function ContactSection({ prefilledCourse = '', onFormSuccess }) 
     hp_bot: '', // Honeypot spam trap
   })
 
-  useEffect(() => {
-    if (prefilledCourse) {
-      setFormData((prev) => ({ ...prev, course: prefilledCourse }))
-    }
-  }, [prefilledCourse])
-
+  const activeCourse = prefilledCourse || formData.course
   const [errors, setErrors] = useState({})
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submittedSuccess, setSubmittedSuccess] = useState(false)
@@ -70,12 +62,12 @@ export default function ContactSection({ prefilledCourse = '', onFormSuccess }) 
     setIsSubmitting(true)
 
     try {
-      await submitEnquiry(formData)
+      await submitEnquiry({ ...formData, course: activeCourse })
       setSubmittedSuccess(true)
-      onFormSuccess?.(formData)
-    } catch (err) {
+      onFormSuccess?.({ ...formData, course: activeCourse })
+    } catch {
       setSubmittedSuccess(true)
-      onFormSuccess?.(formData)
+      onFormSuccess?.({ ...formData, course: activeCourse })
     } finally {
       setIsSubmitting(false)
     }

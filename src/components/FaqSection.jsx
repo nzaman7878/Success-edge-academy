@@ -2,9 +2,7 @@ import React, { useState } from 'react'
 import {
   HelpCircle,
   ChevronDown,
-  Phone,
   MessageCircle,
-  Sparkles,
 } from 'lucide-react'
 import SectionHeading from './ui/SectionHeading'
 import Button from './ui/Button'

@@ -1,9 +1,7 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import {
   Sparkles,
   CheckCircle2,
-  Calendar,
-  Send,
   MessageCircle,
 } from 'lucide-react'
 import Modal from './ui/Modal'
@@ -25,15 +23,12 @@ export default function BookDemoModal({
     mode: 'Classroom',
   })
 
+  // Synchronize when prefilledCourse changes
+  const activeCourse = prefilledCourse || formData.course
+
   const [errors, setErrors] = useState({})
   const [loading, setLoading] = useState(false)
   const [isSuccess, setIsSuccess] = useState(false)
-
-  useEffect(() => {
-    if (prefilledCourse) {
-      setFormData((prev) => ({ ...prev, course: prefilledCourse }))
-    }
-  }, [prefilledCourse])
 
   const validate = () => {
     const errs = {}
@@ -53,9 +48,9 @@ export default function BookDemoModal({
 
     setLoading(true)
     try {
-      await submitEnquiry(formData)
+      await submitEnquiry({ ...formData, course: activeCourse })
       setIsSuccess(true)
-    } catch (err) {
+    } catch {
       setIsSuccess(true)
     } finally {
       setLoading(false)

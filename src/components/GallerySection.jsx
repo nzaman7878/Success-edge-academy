@@ -1,9 +1,6 @@
 import React, { useState } from 'react'
 import {
-  Image as ImageIcon,
   Maximize2,
-  X,
-  Sparkles,
   Building,
 } from 'lucide-react'
 import SectionHeading from './ui/SectionHeading'

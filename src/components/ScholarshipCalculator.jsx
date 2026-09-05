@@ -2,15 +2,10 @@ import React, { useState } from 'react'
 import {
   Calculator,
   Sparkles,
-  ArrowRight,
   CheckCircle2,
-  Trophy,
-  Percent,
   Gift,
-  HelpCircle,
 } from 'lucide-react'
 import SectionHeading from './ui/SectionHeading'
-import Card from './ui/Card'
 import Button from './ui/Button'
 import Badge from './ui/Badge'
 

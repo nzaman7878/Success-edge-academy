@@ -4,7 +4,6 @@ import {
   ArrowRight,
   ShieldCheck,
   CheckCircle2,
-  Users,
   Award,
   Star,
   Flame,
@@ -12,7 +11,6 @@ import {
 } from 'lucide-react'
 import Button from './ui/Button'
 import Badge from './ui/Badge'
-import { academyInfo } from '../data/academyInfo'
 
 export default function Hero({ onBookDemoClick, onExploreCoursesClick }) {
   return (

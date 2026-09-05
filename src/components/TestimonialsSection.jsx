@@ -1,11 +1,9 @@
-import React, { useState } from 'react'
+import React from 'react'
 import {
   MessageSquare,
   Star,
   Quote,
   CheckCircle2,
-  ChevronLeft,
-  ChevronRight,
   Sparkles,
 } from 'lucide-react'
 import SectionHeading from './ui/SectionHeading'
@@ -15,15 +13,6 @@ import Badge from './ui/Badge'
 import { testimonialsData } from '../data/testimonialsData'
 
 export default function TestimonialsSection({ onBookDemoClick }) {
-  const [currentIndex, setCurrentIndex] = useState(0)
-
-  const handlePrev = () => {
-    setCurrentIndex((prev) => (prev === 0 ? testimonialsData.length - 1 : prev - 1))
-  }
-
-  const handleNext = () => {
-    setCurrentIndex((prev) => (prev === testimonialsData.length - 1 ? 0 : prev + 1))
-  }
 
   return (
     <section id="testimonials" className="py-16 sm:py-24 relative overflow-hidden">

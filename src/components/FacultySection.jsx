@@ -1,11 +1,7 @@
 import React from 'react'
 import {
   GraduationCap,
-  Award,
-  BookOpen,
   Sparkles,
-  CheckCircle,
-  Briefcase,
 } from 'lucide-react'
 import SectionHeading from './ui/SectionHeading'
 import Card from './ui/Card'

@@ -6,7 +6,7 @@ export async function submitEnquiry(payload) {
     const cached = JSON.parse(localStorage.getItem('sea_enquiries') || '[]')
     cached.unshift({ ...payload, timestamp: new Date().toISOString() })
     localStorage.setItem('sea_enquiries', JSON.stringify(cached.slice(0, 50)))
-  } catch (e) {
+  } catch {
     // ignore localStorage failure
   }
 

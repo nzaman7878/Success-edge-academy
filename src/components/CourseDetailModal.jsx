@@ -1,19 +1,15 @@
 import React, { useState } from 'react'
 import {
   BookOpen,
-  Calendar,
   Clock,
   CheckCircle2,
   Download,
-  Users,
   Sparkles,
   Phone,
-  FileCheck,
   Check,
 } from 'lucide-react'
 import Modal from './ui/Modal'
 import Button from './ui/Button'
-import Badge from './ui/Badge'
 import { academyInfo } from '../data/academyInfo'
 
 export default function CourseDetailModal({

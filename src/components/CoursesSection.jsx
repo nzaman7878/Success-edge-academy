@@ -4,10 +4,7 @@ import {
   Calendar,
   Clock,
   CheckCircle2,
-  Users,
   Sparkles,
-  ArrowRight,
-  Download,
   Layers,
 } from 'lucide-react'
 import SectionHeading from './ui/SectionHeading'
