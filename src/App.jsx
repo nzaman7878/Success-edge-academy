@@ -6,6 +6,7 @@ import AboutSection from './components/AboutSection'
 import CoursesSection from './components/CoursesSection'
 import CourseDetailModal from './components/CourseDetailModal'
 import ResultsSection from './components/ResultsSection'
+import FacultySection from './components/FacultySection'
 
 function App() {
   const [isDemoModalOpen, setIsDemoModalOpen] = useState(false)
@@ -48,6 +49,7 @@ function App() {
           onEnquireCourse={handleEnquireCourse}
         />
         <ResultsSection onBookDemoClick={() => setIsDemoModalOpen(true)} />
+        <FacultySection onBookDemoClick={() => setIsDemoModalOpen(true)} />
       </main>
 
       {/* Course Detail / Syllabus Modal */}
@@ -60,6 +62,7 @@ function App() {
     </div>
   )
 }
+
 
 
 
