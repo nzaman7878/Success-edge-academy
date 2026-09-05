@@ -11,6 +11,8 @@ import ScholarshipCalculator from './components/ScholarshipCalculator'
 import TestimonialsSection from './components/TestimonialsSection'
 import GallerySection from './components/GallerySection'
 import FaqSection from './components/FaqSection'
+import ContactSection from './components/ContactSection'
+import BookDemoModal from './components/BookDemoModal'
 
 function App() {
   const [isDemoModalOpen, setIsDemoModalOpen] = useState(false)
@@ -63,6 +65,7 @@ function App() {
         <TestimonialsSection onBookDemoClick={() => setIsDemoModalOpen(true)} />
         <GallerySection />
         <FaqSection onBookDemoClick={() => setIsDemoModalOpen(true)} />
+        <ContactSection prefilledCourse={prefilledCourse} />
       </main>
 
       {/* Course Detail / Syllabus Modal */}
@@ -72,9 +75,17 @@ function App() {
         onClose={() => setSelectedCourseForModal(null)}
         onEnquireNow={handleEnquireCourse}
       />
+
+      {/* Global Book Demo Modal */}
+      <BookDemoModal
+        isOpen={isDemoModalOpen}
+        onClose={() => setIsDemoModalOpen(false)}
+        prefilledCourse={prefilledCourse}
+      />
     </div>
   )
 }
+
 
 
 
