@@ -13,6 +13,7 @@ import GallerySection from './components/GallerySection'
 import FaqSection from './components/FaqSection'
 import ContactSection from './components/ContactSection'
 import BookDemoModal from './components/BookDemoModal'
+import FloatingCta from './components/FloatingCta'
 
 function App() {
   const [isDemoModalOpen, setIsDemoModalOpen] = useState(false)
@@ -46,7 +47,7 @@ function App() {
   }
 
   return (
-    <div className="min-h-screen bg-[#050c18] text-slate-100 selection:bg-amber-400 selection:text-slate-950 flex flex-col">
+    <div className="min-h-screen bg-[#050c18] text-slate-100 selection:bg-amber-400 selection:text-slate-950 flex flex-col pb-16 sm:pb-0">
       <Navbar onBookDemoClick={() => setIsDemoModalOpen(true)} />
       <main className="flex-1 space-y-16 lg:space-y-24">
         <Hero
@@ -82,6 +83,9 @@ function App() {
         onClose={() => setIsDemoModalOpen(false)}
         prefilledCourse={prefilledCourse}
       />
+
+      {/* Persistent Floating WhatsApp & Mobile Action Bar */}
+      <FloatingCta onBookDemoClick={() => setIsDemoModalOpen(true)} />
     </div>
   )
 }
