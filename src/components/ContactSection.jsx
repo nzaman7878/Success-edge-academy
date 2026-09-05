@@ -17,6 +17,7 @@ import Button from './ui/Button'
 import Badge from './ui/Badge'
 import { academyInfo } from '../data/academyInfo'
 import { coursesData } from '../data/coursesData'
+import { submitEnquiry } from '../utils/api'
 
 export default function ContactSection({ prefilledCourse = '', onFormSuccess }) {
   const [formData, setFormData] = useState({
@@ -68,19 +69,11 @@ export default function ContactSection({ prefilledCourse = '', onFormSuccess }) 
 
     setIsSubmitting(true)
 
-    // Attempt submitting to minimal backend / fallback
     try {
-      const res = await fetch('/api/enquire', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
-      })
-
-      // Even if offline or mock, proceed gracefully
+      await submitEnquiry(formData)
       setSubmittedSuccess(true)
       onFormSuccess?.(formData)
     } catch (err) {
-      // Fallback works seamlessly
       setSubmittedSuccess(true)
       onFormSuccess?.(formData)
     } finally {

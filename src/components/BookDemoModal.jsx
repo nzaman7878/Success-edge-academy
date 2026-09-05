@@ -10,6 +10,7 @@ import Modal from './ui/Modal'
 import Button from './ui/Button'
 import { coursesData } from '../data/coursesData'
 import { academyInfo } from '../data/academyInfo'
+import { submitEnquiry } from '../utils/api'
 
 export default function BookDemoModal({
   isOpen,
@@ -52,11 +53,7 @@ export default function BookDemoModal({
 
     setLoading(true)
     try {
-      await fetch('/api/enquire', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
-      })
+      await submitEnquiry(formData)
       setIsSuccess(true)
     } catch (err) {
       setIsSuccess(true)
