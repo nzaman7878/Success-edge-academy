@@ -4,10 +4,12 @@ import Hero from './components/Hero'
 import StatsStrip from './components/StatsStrip'
 import AboutSection from './components/AboutSection'
 import CoursesSection from './components/CoursesSection'
+import CourseDetailModal from './components/CourseDetailModal'
 
 function App() {
   const [isDemoModalOpen, setIsDemoModalOpen] = useState(false)
   const [selectedCourseForModal, setSelectedCourseForModal] = useState(null)
+  const [prefilledCourse, setPrefilledCourse] = useState('')
 
   const handleScrollToSection = (sectionId) => {
     const el = document.querySelector(sectionId)
@@ -26,6 +28,7 @@ function App() {
   }
 
   const handleEnquireCourse = (course) => {
+    setPrefilledCourse(course.title)
     setIsDemoModalOpen(true)
   }
 
@@ -44,9 +47,18 @@ function App() {
           onEnquireCourse={handleEnquireCourse}
         />
       </main>
+
+      {/* Course Detail / Syllabus Modal */}
+      <CourseDetailModal
+        course={selectedCourseForModal}
+        isOpen={!!selectedCourseForModal}
+        onClose={() => setSelectedCourseForModal(null)}
+        onEnquireNow={handleEnquireCourse}
+      />
     </div>
   )
 }
+
 
 
 
