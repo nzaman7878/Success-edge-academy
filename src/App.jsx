@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
+import StatsStrip from './components/StatsStrip'
 
 function App() {
   const [isDemoModalOpen, setIsDemoModalOpen] = useState(false)
@@ -24,15 +25,17 @@ function App() {
   return (
     <div className="min-h-screen bg-[#050c18] text-slate-100 selection:bg-amber-400 selection:text-slate-950 flex flex-col">
       <Navbar onBookDemoClick={() => setIsDemoModalOpen(true)} />
-      <main className="flex-1">
+      <main className="flex-1 space-y-16 lg:space-y-24">
         <Hero
           onBookDemoClick={() => setIsDemoModalOpen(true)}
           onExploreCoursesClick={() => handleScrollToSection('#courses')}
         />
+        <StatsStrip />
       </main>
     </div>
   )
 }
+
 
 export default App
 
