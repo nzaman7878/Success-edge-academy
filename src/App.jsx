@@ -9,6 +9,7 @@ import ResultsSection from './components/ResultsSection'
 import FacultySection from './components/FacultySection'
 import ScholarshipCalculator from './components/ScholarshipCalculator'
 import TestimonialsSection from './components/TestimonialsSection'
+import GallerySection from './components/GallerySection'
 
 function App() {
   const [isDemoModalOpen, setIsDemoModalOpen] = useState(false)
@@ -59,6 +60,7 @@ function App() {
         <FacultySection onBookDemoClick={() => setIsDemoModalOpen(true)} />
         <ScholarshipCalculator onClaimScholarship={handleClaimScholarship} />
         <TestimonialsSection onBookDemoClick={() => setIsDemoModalOpen(true)} />
+        <GallerySection />
       </main>
 
       {/* Course Detail / Syllabus Modal */}
@@ -71,6 +73,7 @@ function App() {
     </div>
   )
 }
+
 
 
 
