@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://successedgeacademy.in/sitemap.xml
