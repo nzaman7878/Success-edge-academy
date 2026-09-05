@@ -3,9 +3,11 @@ import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import StatsStrip from './components/StatsStrip'
 import AboutSection from './components/AboutSection'
+import CoursesSection from './components/CoursesSection'
 
 function App() {
   const [isDemoModalOpen, setIsDemoModalOpen] = useState(false)
+  const [selectedCourseForModal, setSelectedCourseForModal] = useState(null)
 
   const handleScrollToSection = (sectionId) => {
     const el = document.querySelector(sectionId)
@@ -23,6 +25,10 @@ function App() {
     }
   }
 
+  const handleEnquireCourse = (course) => {
+    setIsDemoModalOpen(true)
+  }
+
   return (
     <div className="min-h-screen bg-[#050c18] text-slate-100 selection:bg-amber-400 selection:text-slate-950 flex flex-col">
       <Navbar onBookDemoClick={() => setIsDemoModalOpen(true)} />
@@ -33,10 +39,15 @@ function App() {
         />
         <StatsStrip />
         <AboutSection onBookDemoClick={() => setIsDemoModalOpen(true)} />
+        <CoursesSection
+          onSelectCourse={(course) => setSelectedCourseForModal(course)}
+          onEnquireCourse={handleEnquireCourse}
+        />
       </main>
     </div>
   )
 }
+
 
 
 
