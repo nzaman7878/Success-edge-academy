@@ -7,6 +7,7 @@ import CoursesSection from './components/CoursesSection'
 import CourseDetailModal from './components/CourseDetailModal'
 import ResultsSection from './components/ResultsSection'
 import FacultySection from './components/FacultySection'
+import ScholarshipCalculator from './components/ScholarshipCalculator'
 
 function App() {
   const [isDemoModalOpen, setIsDemoModalOpen] = useState(false)
@@ -34,6 +35,11 @@ function App() {
     setIsDemoModalOpen(true)
   }
 
+  const handleClaimScholarship = (data) => {
+    setPrefilledCourse(data.batch)
+    setIsDemoModalOpen(true)
+  }
+
   return (
     <div className="min-h-screen bg-[#050c18] text-slate-100 selection:bg-amber-400 selection:text-slate-950 flex flex-col">
       <Navbar onBookDemoClick={() => setIsDemoModalOpen(true)} />
@@ -50,6 +56,7 @@ function App() {
         />
         <ResultsSection onBookDemoClick={() => setIsDemoModalOpen(true)} />
         <FacultySection onBookDemoClick={() => setIsDemoModalOpen(true)} />
+        <ScholarshipCalculator onClaimScholarship={handleClaimScholarship} />
       </main>
 
       {/* Course Detail / Syllabus Modal */}
@@ -62,6 +69,7 @@ function App() {
     </div>
   )
 }
+
 
 
 
